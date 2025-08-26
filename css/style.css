@@ -369,9 +369,17 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+.about .about-content .image img {
+  max-width: 100%;
+  border-radius: 3px;
+  margin-left: 24px;
+}
 @media (max-width: 991px) {
   .about .about-content .image {
     margin: 0 auto 60px;
+  }
+  .about .about-content .image img {
+    margin-left: 0;
   }
 }
 .about .about-content .image::before {
@@ -395,15 +403,12 @@ body {
   z-index: -1;
   right: -150px;
 }
+
 @media (max-width: 991px) {
   .about .about-content .image::before,
   .about .about-content .image::after {
     display: none;
   }
-}
-.about .about-content .image img {
-  max-width: 100%;
-  border-radius: 3px;
 }
 .about .about-content .text {
   flex-basis: calc(100% - 500px);
