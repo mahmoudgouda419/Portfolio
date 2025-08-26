@@ -118,6 +118,7 @@ body {
   width: 100%;
   height: 2px;
 }
+
 .header .links ul {
   list-style: none;
   margin: 0;
@@ -144,6 +145,7 @@ body {
   right: 5px;
   top: -20px;
 }
+
 .header .links ul li a {
   display: block;
   padding: 15px;
@@ -192,6 +194,7 @@ body {
   padding-top: var(--section-padding);
   background-color: var(--section-background);
 }
+
 .features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -215,6 +218,7 @@ body {
   font-size: 50px;
   color: var(--main-color);
 }
+
 .features .container .feat h3 {
   color: var(--secondary-color);
   margin: 30px 0;
@@ -229,16 +233,19 @@ body {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
+
 .timeline {
   position: relative;
   margin: 48px 0;
   padding-left: 40px;
   border-left: 3px solid var(--main-color);
 }
+
 .services .timeline .item {
   position: relative;
   margin-bottom: 40px;
 }
+
 .services .timeline .icon {
   position: absolute;
   left: -25px;
@@ -257,10 +264,12 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .services .timeline .icon:hover {
   transform: scale(1.2) rotate(10deg);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
+
 .services .timeline .content {
   background: #fff;
   padding: 16px 24px;
@@ -268,15 +277,18 @@ body {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
+
 .services .timeline .content:hover {
   transform: translateX(5px);
   z-index: -1;
 }
+
 .services .timeline .content h3 {
   margin-bottom: 8px;
   font-size: 19px;
   color: var(--main-color);
 }
+
 .services .timeline .content p {
   color: #666;
   font-size: 16px;
