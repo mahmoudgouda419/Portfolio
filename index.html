@@ -7,6 +7,7 @@
     <title>Mahmoud's Portfolio</title>
     <link rel="icon" type="image/png" href="images/logo2.png" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_dark.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +23,10 @@
         <a href="#about" class="logo-link">
           <img decoding="async" class="logo" src="images/logo.png" alt="logo" />
         </a>
+        <label class="switch">
+          <input type="checkbox" class="themeSwitch" />
+          <span class="slider"></span>
+        </label>
 
         <div class="links">
           <span class="icon">
@@ -41,7 +46,7 @@
 
     <div class="landing">
       <div class="intro-text">
-        <h1>Hi, I’m Mahmoud 👋</h1>
+        <h1>Hi, I’m Mahmoud <span>👋</span></h1>
         <p>I enjoy building websites that are simple, fast, and easy to use.</p>
       </div>
     </div>
@@ -313,6 +318,34 @@
         window.addEventListener("scroll", checkScroll);
         checkScroll();
       });
+      // ###########################################
+      let themeSwitch = document.querySelector(".themeSwitch");
+      let logoColor = document.querySelector(
+        ".header .container .logo-link .logo"
+      );
+      let themeElements = document.querySelectorAll(
+        "body, .special-header, .header, .landing, .features, .services, .portfolio, .about, .contact, .footer"
+      );
+
+      themeSwitch.addEventListener("change", () => {
+        themeElements.forEach((el) => el.classList.toggle("dark"));
+
+        if (document.body.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+          logoColor.src = "images/logo2.png";
+        } else {
+          localStorage.setItem("theme", "light");
+          logoColor.src = "images/logo.png";
+        }
+      });
+
+      window.onload = () => {
+        if (localStorage.getItem("theme") === "dark") {
+          themeElements.forEach((el) => el.classList.add("dark"));
+          themeSwitch.checked = true;
+          logoColor.src = "images/logo2.png";
+        }
+      };
     </script>
   </body>
 </html>
